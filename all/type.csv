@@ -1,0 +1,21 @@
+Type Name,Weak To,Strong Against
+normal,fighting,
+fighting,"flying,psychic,fairy","normal,rock,steel,ice,dark"
+flying,"rock,electric,ice","fighting,bug,grass"
+poison,"ground,psychic","grass,fairy"
+ground,"water,grass,ice","poison,rock,steel,fire,electric"
+rock,"fighting,ground,steel,water,grass","flying,bug,fire,ice"
+bug,"flying,rock,fire","grass,psychic,dark"
+ghost,"ghost,dark","ghost,psychic"
+steel,"fighting,ground,fire","rock,ice,fairy"
+fire,"ground,rock,water","bug,steel,grass,ice"
+water,"grass,electric","ground,rock,fire"
+grass,"flying,poison,bug,fire,ice","ground,rock,water"
+electric,ground,"flying,water"
+psychic,"bug,ghost,dark","fighting,poison"
+ice,"fighting,rock,steel,fire","flying,ground,grass,dragon"
+dragon,"ice,dragon,fairy",dragon
+dark,"fighting,bug,fairy","ghost,psychic"
+fairy,"poison,steel","fighting,dragon,dark"
+stellar,,
+unknown,,
