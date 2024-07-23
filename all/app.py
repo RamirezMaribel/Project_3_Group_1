@@ -60,17 +60,17 @@ def print_move_from_moveid(engine, move_id, poke_name):
 # otherwise, returns 0
 def process_inputs(engine, user_input, poke_id, poke_name):
     # process games
-    if input == '1':
+    if user_input == '1':
         print(f'Here are all the games {poke_name} can be found in:')
         print_pokegame_from_pokeid(engine, poke_id)
         return poke_id
     # process types
-    elif input == '2':
+    elif user_input == '2':
         print(f'Here are the type(s) {poke_name} is weak to and strong against:')
         print_types_from_pokeid(engine,poke_id)
         return poke_id
     # process abilities
-    elif input == '3':
+    elif user_input == '3':
         print(f"Here are {poke_name}'s possibile abilities:")
         print_fx_from_pokeid(engine, poke_id)
         ability_yn = input('Would you like to know more detail? (Y/N)').casefold()
@@ -78,7 +78,7 @@ def process_inputs(engine, user_input, poke_id, poke_name):
             print_fx_from_pokeid(engine, poke_id, short=False)
         return poke_id
     # process moves
-    elif input == '4':
+    elif user_input == '4':
         # loop here
         print(f"Here are {poke_name}'s moves:")
         print_moves_from_pokeid(engine, poke_id)
@@ -88,7 +88,7 @@ def process_inputs(engine, user_input, poke_id, poke_name):
             print_move_from_moveid(engine, move_id)
         return poke_id
     # look at different pokemon
-    elif input == '5':
+    elif user_input == '5':
         return 0 # return 0 to turn is_valid_pokexxx calls to False because 0 is an invalid Poke ID
     # if validation gets here, user wants to stop
     else:
