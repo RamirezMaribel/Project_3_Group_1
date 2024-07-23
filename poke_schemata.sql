@@ -22,16 +22,6 @@ CREATE TABLE `Pokemon` (
     )
 );
 
-CREATE TABLE `pokeEvo` (
-    `evolution_chain` int  NOT NULL ,
-    `stage_1` string  NOT NULL ,
-    `stage_2` string  NOT NULL ,
-    `stage_3` string  NOT NULL ,
-    PRIMARY KEY (
-        `evolution_chain`
-    )
-);
-
 -- https://pokeapi.co/api/v2/type/
 -- add additional weak to/strong against calculation later
 -- Maribel
@@ -58,7 +48,7 @@ CREATE TABLE `Ability` (
 
 CREATE TABLE `pokeAbility` (
     `poke_id` int  NOT NULL ,
-    `ability_id` int  NOT NULL ,
+    `ability_id` string  NOT NULL ,
     PRIMARY KEY (
         `poke_id`,`ability_id`
     )
@@ -81,7 +71,7 @@ CREATE TABLE `pokeGame` (
     )
 );
 
--- https://pokeapi.co/api/v2/move?limit=937
+-- https://pokeapi.co/api/v2/move/
 -- Kaitlyn
 CREATE TABLE `Move` (
     `move_id` int  NOT NULL ,
@@ -102,6 +92,16 @@ CREATE TABLE `pokeMove` (
     `move_id` int  NOT NULL ,
     PRIMARY KEY (
         `poke_id`,`move_id`
+    )
+);
+
+CREATE TABLE `pokeEvo` (
+    `evolution_chain` int  NOT NULL ,
+    `stage_1` string  NOT NULL ,
+    `stage_2` string  NOT NULL ,
+    `stage_3` string  NOT NULL ,
+    PRIMARY KEY (
+        `evolution_chain`
     )
 );
 
