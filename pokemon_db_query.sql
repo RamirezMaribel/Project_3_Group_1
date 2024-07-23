@@ -68,11 +68,11 @@ CREATE TABLE Move (
     PRIMARY KEY (move_id)
 );
 CREATE TABLE pokeMove (
-    poke_id int NOT NULL,
     move_id int NOT NULL,
+    poke_id int NOT NULL,
     PRIMARY KEY (poke_id, move_id),
-    FOREIGN KEY (poke_id) REFERENCES Pokemon (poke_id),
-    FOREIGN KEY (move_id) REFERENCES Move (move_id)
+    FOREIGN KEY (move_id) REFERENCES Move (move_id),
+    FOREIGN KEY (poke_id) REFERENCES Pokemon (poke_id)
 );
 CREATE TABLE pokeEvo (
     evolution_chain int NOT NULL,
