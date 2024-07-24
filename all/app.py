@@ -202,7 +202,7 @@ def process_inputs(conn, user_input, poke_id, poke_name):
         return 0 # return 0 to turn is_valid_pokexxx calls to False because 0 is an invalid Poke ID
     # if validation gets here, user wants to stop
     else:
-        query_yn = input('Would you like to print out your query? (Y/N)').casefold()
+        query_yn = input('Would you like a print out? (Y/N)').casefold()
         # Fix
         path = 'app_exports'
         if (query_yn == 'y'):
