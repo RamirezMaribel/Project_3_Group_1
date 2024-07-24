@@ -1,12 +1,13 @@
 # Data Engineering Track: Pokemon Data Base
 
 ## Contents
-0) Overview 
-1) Files to Reference
-2) Entity Relationship Diagram
-3) Application Flowchart 
-4) Ethical Considerations
-5) Data Source Reference(s)
+0) Overview
+1) Application Instructions
+2) Files to Reference
+3) Entity Relationship Diagram
+4) Application Flowchart 
+5) Ethical Considerations
+6) Data Source Reference(s)
 
 
 ## Overview
@@ -31,21 +32,37 @@ This repository contains the files for **pokeDatabase**, a python application cr
 *Pokemon, games, moves, abilities are all assigned to their own individual ID.*
 
 
+## Application Instructions (Including data engineering steps)
+1. Create database in pgAdmin
+   
+2. Import code from ```pokemon_db_query``` to use to create tables. <br />
+   *Please refer to instructions beginning at ```Line 100``` on how to import csv files to pgAdmin. You may also refer to file paths listed beginning on ```Line 100``` if problems arise and csv files must be uploaded individually.*
+
+3. Ensure database URL is updated with correct information. <br />
+    ```postgresql://<username>:<password>@<host>:<port>/<database_name>```
+   
+4. Open app.py with console once database has been created and populated.
+   
+5. Interact with prompt.   
+
+
 ## Files to Reference
 This project focuses on the **Data Engineering Track**, where files within the repository contribute to the overall ETL process of the project, as outlined in project requirements.
 
 - ```app.py```: pokeDatabase application, where user will interact with console to extract data from SQL database. 
 
-- The ```all``` folder contains the data selected and pulled from PokéAPI. Every csv file corresponds to a table indicated in the ERD, seen below.
+- The ```application``` folder contains the data selected and pulled from PokéAPI. Every csv file corresponds to a table indicated in the ERD.
     - *Data extraction and transforming was split between group members; files within each group member's folder correspond to the data that was extracted from the member.*
       
 - ```poke_erd.png```: Entity Relationship Diagram
   
-- ```poke_schemata```: SQL schematic used to create ERD
+- ```poke_schemata.sql```: SQL schematic used to create ERD
   
-- ```pokemon_db_query_sql```: Queries used in SQL to create new database from previously generated csv files
+- ```pokemon_db_query.sql```: Queries used in SQL to create new database from previously generated csv files
   
-- ```poke_flowchart```: Flowchart visualization to display routes of user and console interaction within the python application
+- ```poke_flowchart.png```: Flowchart visualization to display routes of user and console interaction within the python application
+
+- ```pokeDatabase_ppt.pdf```: Presentation displaying project at high level
 
       
 ## Entity Relationship Diagram
